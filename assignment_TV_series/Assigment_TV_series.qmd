@@ -24,4 +24,4 @@ library(reticulate)
 
 # The official logo of the TV Series
 
-| [Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Seinfeld_logo.svg/345px-Seinfeld_logo.svg.png)
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Seinfeld_logo.svg/345px-Seinfeld_logo.svg.png)
