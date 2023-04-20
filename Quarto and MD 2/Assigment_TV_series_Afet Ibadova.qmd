@@ -3,7 +3,6 @@ title: "Seinfeld"
 author: "Afet Ibadova"
 date: "4/20/2023"
 date-format: short
-
 format: 
   html:
     toc: true
@@ -39,7 +38,7 @@ library(reticulate)
 
 ## Details about the show
 
-> **Seinfeld** is an American television sitcom created by *Jerry Seinfeld* and *Larry David*. Seinfeld has been described by some as a "show about nothing", similar to the self-parodying "show within a show" of fourth-season episode "The Pilot". Jerry Seinfeld is the lead character and played as a fictionalized version of himself. Set predominantly in an apartment block on New York City's Upper West Side, the show features a host of Jerry's friends and acquaintances, which include *George Costanza*, *Elaine Benes*, and *Cosmo Kramer*, who are portrayed by *Jason Alexander*, *Julia Louis-Dreyfus*, and *Michael Richards*, respectively.
+> **Seinfeld** is an American television sitcom created by **Jerry Seinfeld** and **Larry David**. Seinfeld has been described by some as a "show about nothing", similar to the self-parodying "show within a show" of fourth-season episode "The Pilot". Jerry Seinfeld is the lead character and played as a fictionalized version of himself. Set predominantly in an apartment block on New York City's Upper West Side, the show features a host of Jerry's friends and acquaintances, which include *George Costanza*, *Elaine Benes*, and *Cosmo Kramer*, who are portrayed by *Jason Alexander*, *Julia Louis-Dreyfus*, and *Michael Richards*, respectively.
 
 ## The official logo of the TV Series
 
