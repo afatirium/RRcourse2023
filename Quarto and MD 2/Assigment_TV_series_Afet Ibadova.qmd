@@ -11,6 +11,8 @@ format:
     toc-title: Contents
     toc-location: left
     smooth-scroll: true
+  pdf: default
+  
 number-sections: true
 number-depth: 2 
 title-block-banner: true
