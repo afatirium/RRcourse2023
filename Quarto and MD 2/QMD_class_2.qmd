@@ -14,8 +14,6 @@ format:
     toc-location: left
     smooth-scroll: true
   pdf: default
-    lof: true
-    lot: true
   revealjs:
     output-file: document
 number-sections: true

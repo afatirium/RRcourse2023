@@ -11,8 +11,11 @@ format:
     toc-title: Contents
     toc-location: left
     smooth-scroll: true
-  pdf: default
-  
+  docx: 
+    lof: true
+    lot: true
+  revealjs:
+    output-file: assignment
 number-sections: true
 number-depth: 2 
 title-block-banner: true
