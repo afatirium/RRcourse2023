@@ -11,7 +11,7 @@ format:
     toc-title: Contents
     toc-location: left
     smooth-scroll: true
-  docx: 
+  pdf: 
     lof: true
     lot: true
   revealjs:
