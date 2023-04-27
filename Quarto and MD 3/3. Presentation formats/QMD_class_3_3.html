@@ -7,7 +7,7 @@
 <link href="QMD_class_3_3_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="QMD_class_3_3_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="QMD_class_3_3_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.2.335">
+  <meta name="generator" content="quarto-1.1.189">
 
   <meta name="author" content="Wojciech Hardy">
   <title>Quarto</title>
@@ -323,20 +323,13 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
+<section id="title-slide" class="center">
   <h1 class="title">Quarto</h1>
   <p class="subtitle">Presentation formats</p>
-
-<div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Wojciech Hardy 
-</div>
-</div>
-</div>
-
+  <p class="author">Wojciech Hardy</p>
   <p class="date">4/27/23</p>
 </section>
+
 <section>
 <section id="lets-see" class="title-slide slide level1 center">
 <h1>Let’s see!</h1>
@@ -421,14 +414,17 @@ Wojciech Hardy
 <h2>Beamer and Powerpoint</h2>
 <p>Beamer uses LaTeX, so again you can use LaTeX syntax here.</p>
 <ul>
-<li>Some nice themes here, try:</li>
+<li>Some nice themes here, e.g.&nbsp;one used here:</li>
 </ul>
-<p><code>output:</code><br>
-<code>beamer_presentation:</code><br>
-<code>theme: "AnnArbor"</code><br>
-<code>colortheme: "dolphin"</code><br>
-<code>fonttheme: "structurebold"</code></p>
-<p>You can also check <code>powerpoint_presentation</code></p>
+<p><code>theme: "AnnArbor"</code></p>
+<p><code>colortheme: "dolphin"</code></p>
+<p><code>fonttheme: "structurebold"</code></p>
+<p>You can also check <code>powerpoint</code>.</p>
+</section>
+<section id="more-options" class="slide level2">
+<h2>More options</h2>
+<p>Of course there is a lot more options.</p>
+<p><a href="https://quarto.org/docs/presentations/">Check the full documentation.</a></p>
 <div class="footer footer-default">
 <p>Presentation for the RR course.</p>
 </div>
@@ -682,24 +678,7 @@ Wojciech Hardy
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
         button.setAttribute("title", "Copied!");
-        let tooltip;
-        if (window.bootstrap) {
-          button.setAttribute("data-bs-toggle", "tooltip");
-          button.setAttribute("data-bs-placement", "left");
-          button.setAttribute("data-bs-title", "Copied!");
-          tooltip = new bootstrap.Tooltip(button, 
-            { trigger: "manual", 
-              customClass: "code-copy-button-tooltip",
-              offset: [0, -8]});
-          tooltip.show();    
-        }
         setTimeout(function() {
-          if (tooltip) {
-            tooltip.hide();
-            button.removeAttribute("data-bs-title");
-            button.removeAttribute("data-bs-toggle");
-            button.removeAttribute("data-bs-placement");
-          }
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');
         }, 1000);
@@ -737,42 +716,24 @@ Wojciech Hardy
           return note.innerHTML;
         });
       }
-      const findCites = (el) => {
-        const parentEl = el.parentElement;
-        if (parentEl) {
-          const cites = parentEl.dataset.cites;
-          if (cites) {
-            return {
-              el,
-              cites: cites.split(' ')
-            };
-          } else {
-            return findCites(el.parentElement)
-          }
-        } else {
-          return undefined;
-        }
-      };
       var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
       for (var i=0; i<bibliorefs.length; i++) {
         const ref = bibliorefs[i];
-        const citeInfo = findCites(ref);
-        if (citeInfo) {
-          tippyHover(citeInfo.el, function() {
-            var popup = window.document.createElement('div');
-            citeInfo.cites.forEach(function(cite) {
-              var citeDiv = window.document.createElement('div');
-              citeDiv.classList.add('hanging-indent');
-              citeDiv.classList.add('csl-entry');
-              var biblioDiv = window.document.getElementById('ref-' + cite);
-              if (biblioDiv) {
-                citeDiv.innerHTML = biblioDiv.innerHTML;
-              }
-              popup.appendChild(citeDiv);
-            });
-            return popup.innerHTML;
+        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+        tippyHover(ref, function() {
+          var popup = window.document.createElement('div');
+          cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
           });
-        }
+          return popup.innerHTML;
+        });
       }
     });
     </script>
